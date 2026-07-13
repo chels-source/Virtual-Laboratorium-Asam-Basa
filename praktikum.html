@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Virtual Lab Asam Basa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🧪 Virtual Lab Asam Basa</h1>
+    <p>Uji pH larutan berbasis kearifan lokal Maluku</p>
+</header>
+
+<div class="lab-container">
+
+    <!-- PILIH LARUTAN -->
+
+    <section class="botol-area">
+
+        <h2>Pilih Larutan</h2>
+
+        <div class="botol-list">
+
+
+<div class="botol"
+     data-nama="Gandaria"
+     data-gambar="gambar/gandaria.png"
+     data-ph="4"
+     data-sifat="Asam"
+     data-warna-cairan="#F5C33C">
+    <img src="gambar/gandaria.png" alt="Gandaria">
+    <p>Gandaria</p>
+
+</div>
+
+<div class="botol"
+     data-nama="Cuka Nira"
+     data-gambar="gambar/cuka.png"
+     data-ph="3"
+     data-sifat="Asam"
+     data-warna-cairan="#E7F1F2">
+    <img src="gambar/cuka.png" alt="Cuka Nira">
+    <p>Cuka Nira</p>
+
+</div>
+
+<div class="botol"
+     data-nama="Jeruk Kisar"
+     data-gambar="gambar/jeruk_kisar.png"
+     data-ph="2"
+     data-sifat="Asam"
+     data-warna-cairan="#F9F1C3">
+    <img src="gambar/jeruk_kisar.png" alt="Jeruk Kisar">
+    <p>Jeruk Kisar</p>
+
+</div>
+
+<div class="botol"
+     data-nama="Kapur Sirih"
+     data-gambar="gambar/kapur.png"
+     data-ph="12"
+     data-sifat="Basa"
+     data-warna-cairan="#F0F1EB">
+    <img src="gambar/kapur.png" alt="Kapur Sirih">
+    <p>Kapur Sirih</p>
+
+</div>
+
+<div class="botol"
+     data-nama="Abu Bakar"
+     data-gambar="gambar/abu.png"
+     data-ph="11"
+     data-sifat="Basa"
+     data-warna-cairan="#494C47">
+    <img src="gambar/abu.png" alt="Abu Bakar">
+    <p>Abu Bakar</p>
+
+</div>
+
+<div class="botol"
+     data-nama="Sabun"
+     data-gambar="gambar/sabun.png"
+     data-ph="10"
+     data-sifat="Basa"
+     data-warna-cairan="#A0D5DF">
+    <img src="gambar/sabun.png" alt="Sabun">
+    <p>Sabun</p>
+
+</div>
+
+        </div>
+
+    </section>
+  
+<!-- ================= AREA PRAKTIKUM ================= -->
+
+<section class="area-praktikum">
+
+    <h2>🧪 Area Praktikum</h2>
+
+    <div class="meja-praktikum">
+
+<!-- Botol yang dipilih -->
+<div class="botol-terpilih">
+
+    <h3>Larutan Dipilih</h3>
+
+    <img id="gambarLarutan"
+         src="gambar/gandaria.png"
+         alt="Larutan">
+
+    <p id="namaBotol">
+        Pilih larutan
+    </p>
+
+</div>
+
+        <!-- Pipet -->
+
+        <div class="pipet-area">
+
+<img id="pipet"
+     src="gambar/pipet.png"
+     alt="Pipet"
+     onclick="ambilLarutan()">
+
+      </div>
+
+
+        <!-- Gelas Kimia -->
+
+        <div class="gelas-area">
+
+            <div id="cairan"></div>
+
+            <img id="gelas"
+                 src="gambar/gelas.png"
+                 alt="Gelas Kimia">
+
+        </div>
+
+        <!-- Tetesan -->
+
+        <div id="tetes"></div>
+
+
+<!-- ================= KERTAS LAKMUS ================= -->
+
+<div class="lakmus-area">
+
+    <h3>Kertas Lakmus</h3>
+
+    <div id="kertasLakmus"></div>
+
+    <p id="statusLakmus">
+        Belum diuji
+    </p>
+
+</div>
+
+    </div>
+
+</section>
+
+<!-- ================= HASIL PENGAMATAN ================= -->
+
+<section class="hasil">
+
+    <h2>📋 Hasil Pengamatan</h2>
+
+    <div class="hasil-box">
+
+        <p>
+            <strong>Larutan :</strong>
+            <span id="namaLarutan">-</span>
+        </p>
+
+        <p>
+            <strong>Nilai pH :</strong>
+            <span id="nilaiPH">-</span>
+        </p>
+
+        <p>
+            <strong>Sifat :</strong>
+            <span id="hasilSifat">-</span>
+        </p>
+
+        <p>
+            <strong>Perubahan Lakmus :</strong>
+            <span id="hasilLakmus">-</span>
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= TOMBOL ================= -->
+
+<div class="tombol-area">
+
+    <button id="ujiBtn">
+        ▶️ Uji Larutan
+    </button>
+
+    <button id="resetBtn">
+        🔄 Reset Praktikum
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
